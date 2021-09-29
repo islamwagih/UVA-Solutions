@@ -11,7 +11,9 @@ inline void fastInputOutput(){
     cin.tie(0);cout.tie(0);
 }
 
-ll fastPow(int b, int p, int m){
+const int N = 2e5 + 5;
+
+ll fastPow(ll b, ll p, ll m){
     b%=m;
     ll ans = 1;
     while(p){
@@ -24,10 +26,14 @@ ll fastPow(int b, int p, int m){
 
 int main(){
     fastInputOutput();
-    int b,p,m;
-    while(cin>>b){
-        cin>>p>>m;
-        cout<<fastPow(b, p, m)<<endl;
+    int t;
+    while(cin>>t, t){
+        while(t--){
+           ll x, y, mod;
+           cin>>x>>y>>mod;
+           cout<<fastPow(x, y, mod)<<endl;
+        }
     }
+
     return 0;
 }
